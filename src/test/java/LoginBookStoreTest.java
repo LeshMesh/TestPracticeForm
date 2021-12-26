@@ -1,5 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +7,7 @@ import static com.codeborne.selenide.Selenide.switchTo;
 
 public class LoginBookStoreTest {
     @Test
-    void RegisterNewUser() {
+    void registerNewUser() {
         Selenide.open("https://demoqa.com/register");
         $("#firstname").setValue("Andrey");
         $("#lastname").setValue("Perov");
@@ -24,7 +23,7 @@ public class LoginBookStoreTest {
     }
 
     @Test
-    void LoginUserTrue() {
+    void loginUserTrue() {
         Selenide.open("https://demoqa.com/login");
         $("#userForm").shouldHave(Condition.text("Login in Book Store"));
         $("#userName").setValue("APerov");
@@ -36,7 +35,7 @@ public class LoginBookStoreTest {
     }
 
     @Test
-    void LoginUserFalseName() {
+    void loginUserFalseName() {
         Selenide.open("https://demoqa.com/login");
         $("#userForm").shouldHave(Condition.text("Login in Book Store"));
         $("#userName").setValue("APerovZZZ");
@@ -46,7 +45,7 @@ public class LoginBookStoreTest {
     }
 
     @Test
-    void LoginUserFalsePassword() {
+    void loginUserFalsePassword() {
         Selenide.open("https://demoqa.com/login");
         $("#userForm").shouldHave(Condition.text("Login in Book Store"));
         $("#userName").setValue("APerov");
