@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class Homework3Test {
+public class Homework3Test extends TestBase {
 
     // Задание 1. Есть ли разница между $("h1 div"); и $("h1").$("div");
     // $("h1").$("div") сначала находится первый элемент h1, а затем в нем ищется div с любой вложенностью

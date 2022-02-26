@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.switchTo;
 
-public class LoginBookStoreTest {
+public class LoginBookStoreTest extends TestBase {
     @Test
     void registerNewUser() {
         Selenide.open("https://demoqa.com/register");
