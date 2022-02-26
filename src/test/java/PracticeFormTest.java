@@ -3,12 +3,11 @@ import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PracticeFormTest {
+public class PracticeFormTest extends TestBase {
+
     @Test
     void fillFormTest() {
         Selenide.open("https://demoqa.com/automation-practice-form");
@@ -28,7 +27,7 @@ public class PracticeFormTest {
         $("#uploadPicture").uploadFromClasspath("img/dog.jpg");
         $("#currentAddress").setValue("Russia, Moscow");
         $("#state").click();
-        $("#react-select-3-option-2").click();
+        $("#react-select-3-option-0").scrollTo().click();
         $("#city").click();
         $("#react-select-4-option-0").click();
         $("#submit").click();
@@ -36,8 +35,6 @@ public class PracticeFormTest {
         $(".modal-content").shouldBe(Condition.visible);
         $(".modal-content").shouldHave(text("Alexey Belyakov"), text("user@mail.com"), text("Male"),
                 text("8999123456"), text("02 November,1992"), text("Computer Science"), text("Sports, Music"),
-                text("dog.jpg"), text("Russia, Moscow"), text("Haryana Karnal"));
-
-
+                text("dog.jpg"), text("Russia, Moscow"), text("NCR Delhi"));
     }
 }
