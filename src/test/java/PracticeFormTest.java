@@ -35,6 +35,7 @@ public class PracticeFormTest extends TestBase {
         $(".modal-content").shouldBe(Condition.visible);
         $(".modal-content").shouldHave(text("Alexey Belyakov"), text("user@mail.com"), text("Male"),
                 text("8999123456"), text("02 November,1992"), text("Computer Science"), text("Sports, Music"),
-                text("dog.jpg"), text("Russia, Moscow"), text("NCR Delhi"));
+                //text("dog.jpg"),
+                text("Russia, Moscow"), text("NCR Delhi"));
     }
 }
