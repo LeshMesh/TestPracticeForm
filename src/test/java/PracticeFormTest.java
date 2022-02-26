@@ -24,10 +24,10 @@ public class PracticeFormTest extends TestBase {
         $(Selectors.byText("Computer Science")).scrollTo().click();
         $("[for=hobbies-checkbox-1]").click();
         $("[for=hobbies-checkbox-3]").click();
-        $("#uploadPicture").uploadFromClasspath("img/dog.jpg");
+        $("#uploadPicture").scrollTo().uploadFromClasspath("img/dog.jpg");
         $("#currentAddress").setValue("Russia, Moscow");
         $("#state").click();
-        $("#react-select-3-option-0").scrollTo().click();
+        $("#react-select-3-option-0").click();
         $("#city").click();
         $("#react-select-4-option-0").click();
         $("#submit").click();
