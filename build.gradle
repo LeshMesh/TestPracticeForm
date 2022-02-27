@@ -43,7 +43,7 @@ dependencies {
             "org.slf4j:slf4j-simple:1.7.32")
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
