@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormTest extends TestBase {
@@ -39,5 +40,6 @@ public class PracticeFormTest extends TestBase {
                 text("8999123456"), text("02 November,1992"), text("Computer Science"), text("Sports, Music"),
                 //text("dog.jpg"),
                 text("Russia, Moscow"), text("NCR Delhi"));
+        System.out.println(browser);
     }
 }

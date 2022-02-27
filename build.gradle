@@ -48,7 +48,7 @@ test {
     systemProperties(System.getProperties())
 }
 
-task properties_tests(type: Test) {
+task jenkins_tests(type: Test) {
     useJUnitPlatform{
         includeTags "for_jenkins"
     }
