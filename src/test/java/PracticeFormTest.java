@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -9,6 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormTest extends TestBase {
 
     @Test
+    @Tag("for_jenkins")
     void fillFormTest() {
         String browser = System.getProperty("browser");
 
