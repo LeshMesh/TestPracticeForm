@@ -13,7 +13,7 @@ public class PracticeFormTest extends TestBase {
     @Test
     @Tag("for_jenkins")
     void fillFormTest() {
-        Selenide.open("https://demoqa.com/automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue("Alexey");
         $("#lastName").setValue("Belyakov");
         $("#userEmail").setValue("user@mail.com");
@@ -40,6 +40,5 @@ public class PracticeFormTest extends TestBase {
                 text("8999123456"), text("02 November,1992"), text("Computer Science"), text("Sports, Music"),
                 //text("dog.jpg"),
                 text("Russia, Moscow"), text("NCR Delhi"));
-        System.out.println(browser);
     }
 }
