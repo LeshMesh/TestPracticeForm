@@ -12,9 +12,9 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        String browser = System.getProperty("browser");
+//        String browser = System.getProperty("browser");
 
-        Configuration.browser = browser;
+        Configuration.browser = System.getProperty("browser");
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
