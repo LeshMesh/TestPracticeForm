@@ -12,15 +12,15 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        String browser = System.getProperty("browser");
         String login = System.getProperty("login","user1");
         String password = System.getProperty("password","1234");
         String url = System.getProperty("url");
         String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
-        Configuration.browser = browser;
-        Configuration.browserSize = "1920x1080";
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserSize = System.getProperty("browserSize");
         Configuration.remote = remoteUrl;
+        Configuration.browserVersion = System.getProperty("browserVersion");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
@@ -30,7 +30,7 @@ public class TestBase {
 
     @AfterEach
     void afterEach() {
-        Attach.screenshotAs(System.getProperty("browser"));
+        Attach.screenshotAs(System.getProperty("browser")+ " " + System.getProperty("browserVersion"));
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
