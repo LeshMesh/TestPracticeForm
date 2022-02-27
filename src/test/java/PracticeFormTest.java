@@ -12,8 +12,6 @@ public class PracticeFormTest extends TestBase {
     @Test
     @Tag("for_jenkins")
     void fillFormTest() {
-        String browser = System.getProperty("browser");
-
         Selenide.open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue("Alexey");
         $("#lastName").setValue("Belyakov");
