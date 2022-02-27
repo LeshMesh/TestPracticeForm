@@ -10,6 +10,8 @@ public class PracticeFormTest extends TestBase {
 
     @Test
     void fillFormTest() {
+        String browser = System.getProperty("browser");
+
         Selenide.open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue("Alexey");
         $("#lastName").setValue("Belyakov");
